@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/dist/output.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
             rel="stylesheet"
         />
-        <script src="./js/main.js" defer></script>
-        <style>
-            * {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 400;
-            }
-        </style>
+        <script src="./js/main.js" type="module" defer></script>
+        <title></title>
     </head>
     <body class="bg-primary-light min-h-screen">
         <div class="flex flex-col h-screen bg-primary-light w-full max">
@@ -35,7 +29,7 @@
                     </h2>
 
                     <div class="flex flex-col gap-y-1">
-                        <input
+                        <label for="email"></label><input
                             id="email"
                             class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
                             name="email"
@@ -57,7 +51,7 @@
                         </span>
                     </div>
                     <div class="flex flex-col gap-y-1">
-                        <input
+                        <label for="password"></label><input
                             id="password"
                             class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
                             name="password"

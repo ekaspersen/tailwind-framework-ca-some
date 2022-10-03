@@ -1,26 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/dist/output.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
             rel="stylesheet"
         />
-        <script src="../js/main.js" defer></script>
-        <style>
-            * {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 400;
-            }
-        </style>
+        <script src="./js/main.js" type="module" defer></script>
+        <title></title>
     </head>
     <body class="bg-primary-dark">
         <main class="max-w-md mx-auto px-2">
-            <input
+            <label for="searchbar"></label><input
                 class="w-full p-2 placeholder:text-primary text-primary-dark"
                 placeholder="Search for a user"
                 type="text"
@@ -30,7 +24,7 @@
             <section
                 class="flex flex-col px-2 w-full py-4 gap-3 border-b-2 border-clr-white"
             >
-                <textarea
+                <label for=""></label><textarea
                     name=""
                     id=""
                     placeholder="Write something on Hesham’s wall! ..."
