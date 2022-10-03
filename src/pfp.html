@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="/dist/output.css" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
             rel="stylesheet"
         />
-        <script src="../js/main.js" defer></script>
-        <style>
-            * {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 400;
-            }
-        </style>
+        <script src="./js/main.js" type="module" defer></script>
+        <title></title>
     </head>
     <body class="bg-primary-dark">
         <header
@@ -26,18 +20,19 @@
             "
         >
             <div class="absolute max-w-md w-full flex justify-between">
-                <a href="#contacts" class="ml-3"
-                    ><div class="w-16 h-16 bg-primary grid place-items-center">
+                <a href="#contacts" class="ml-3">
+                    <div class="w-16 h-16 bg-primary grid place-items-center">
                         <img
-                            src="../img/svg/list-hamburger.svg"
+                            src="./img/svg/list-hamburger.svg"
                             alt="list icon"
-                        /></div
-                ></a>
+                        />
+                    </div>
+                </a>
                 <a href="#addFriend" class="mr-3"
                     ><div class="w-16 h-16 bg-primary grid place-items-center">
                         <img
                             class="ml-2"
-                            src="../img/svg/add-user.svg"
+                            src="./img/svg/add-user.svg"
                             alt="add user icon"
                         /></div
                 ></a>
@@ -67,7 +62,7 @@
             <section
                 class="flex flex-col px-2 w-full py-4 gap-3 border-b-2 border-clr-white"
             >
-                <textarea
+                <label for=""></label><textarea
                     name=""
                     id=""
                     placeholder="Write something on Hesham’s wall! ..."

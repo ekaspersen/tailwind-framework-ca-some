@@ -5,9 +5,9 @@ export default {
     build: {
         rollupOptions: {
             input: {
-                home: path.resolve(__dirname, "index.html"),
-                pfp: path.resolve(__dirname, "pfp.html"),
-                feed: path.resolve(__dirname, "feed.html"),
+                home: path.resolve(__dirname, "src/index.html"),
+                pfp: path.resolve(__dirname, "src/pfp.html"),
+                feed: path.resolve(__dirname, "src/feed.html"),
             },
         },
     },
