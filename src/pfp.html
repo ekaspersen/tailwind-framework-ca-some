@@ -9,10 +9,69 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
             rel="stylesheet"
         />
-        <script src="./js/main.js" type="module" defer></script>
-        <title></title>
+        <script src="./js/index.js" type="module" defer></script>
+        <script src="./js/getPostsByUserID.js" type="module" defer></script>
+        <title>SoMe | userName</title>
     </head>
-    <body class="bg-primary-dark">
+    <body class="bg-primary-dark relative">
+        <nav
+            class="max-w-md w-full h-20 fixed bottom-0 inset-x-0 mx-auto z-50 flex gap-5 justify-center items-center bg-primary"
+        >
+            <div class="flex w- justify-center gap-40 mx-auto w-full">
+                <a href="."
+                    ><img
+                        class="h-16"
+                        src="./img/svg/home-nav-icon.svg"
+                        alt="feed"
+                /></a>
+
+                <a href="./pfp.html"
+                    ><img
+                        class="h-16"
+                        src="./img/svg/user-nav-icon.svg"
+                        alt="feed"
+                /></a>
+            </div>
+            <div class="fixed w-fit bottom-0 inset-x-0 mx-auto z-50">
+                <button id="createPostBtn">
+                    <img
+                        src="./img/svg/new-post-icon.svg"
+                        alt="new post button"
+                    />
+                </button>
+            </div>
+        </nav>
+        <div
+            id="newPostForm"
+            class="hidden fixed bottom-20 max-w-md mx-auto inset-x-0 w-full place-items-center z-40 bg-primary-dark"
+        >
+            <form
+                class="flex flex-col px-2 w-full py-4 gap-3 border-2 border-b-0 border-primary"
+            >
+                <label for="Subject"></label>
+                <input
+                    type="text"
+                    name=""
+                    id=""
+                    class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
+                />
+                <label for=""></label
+                ><textarea
+                    name=""
+                    id=""
+                    placeholder="Tell the world something ..."
+                    rows="5"
+                    class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
+                ></textarea>
+                <button
+                    name=""
+                    id=""
+                    class="text-base text-clr-white font-semibold bg-primary py-1 px-8 border-2 border-clr-white w-fit"
+                >
+                    Post
+                </button>
+            </form>
+        </div>
         <header
             class="flex flex-col items-center p-3 gap-3 text-center border-b-2 border-clr-white relative"
             style="
@@ -39,11 +98,11 @@
             </div>
             <div class="h-32 w-32 bg-clr-black rounded-full"></div>
             <div class="flex flex-col items-center">
-                <h1 class="text-clr-white text-2xl font-semibold">
+                <h1 class="nameOfUser text-clr-white text-2xl font-semibold">
                     Hesham El Masry
                 </h1>
                 <p class="text-primary-light text-sm font-semibold">
-                    --- Teacher at Noroff ---
+                    - - - Title of person - - -
                 </p>
             </div>
 
@@ -62,7 +121,8 @@
             <section
                 class="flex flex-col px-2 w-full py-4 gap-3 border-b-2 border-clr-white"
             >
-                <label for=""></label><textarea
+                <label for=""></label
+                ><textarea
                     name=""
                     id=""
                     placeholder="Write something on Hesham’s wall! ..."
@@ -75,146 +135,13 @@
                     >Post</a
                 >
             </section>
+
             <section class="flex flex-col px-2 w-full py-4 gap-3">
-                <h2 class="text-clr-white font-semibold text-2xl">
-                    Hesham's wall
-                </h2>
-                <div class="flex flex-col">
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            class="w-12 h-12 bg-clr-black rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Eskil Kaspersen
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                Happy birthday HESHAMIITOOOO, hope there will be
-                                lots of cake n stuff!!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            style="
-                                background: linear-gradient(
-                                    101.31deg,
-                                    #ff00d6 8.33%,
-                                    #b312ff 95%
-                                );
-                            "
-                            class="w-12 h-12 rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Snorre Kolnes
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                Seian Hesh! gratulere med dågen! nej helveta
-                                glemte du snakke engelsk hehe
-                                seiaaaaaaaaaaaaaaaaaaaaan aha haaaaa det va
-                                dumt, jaja. feir med måte!!
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            style="
-                                background: linear-gradient(
-                                    180.31deg,
-                                    #ff006a 8.33%,
-                                    #d4ff12 95%
-                                );
-                            "
-                            class="w-12 h-12 rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Magnam Soluta
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Praesentium, magnam! Eveniet
-                                soluta assumenda error aut, ad perspiciatis
-                                ipsum quasi accusantium blanditiis! Rerum, hic
-                                odit quod necessitatibus voluptatum perspiciatis
-                                expedita eum.
-                            </p>
-                        </div>
-                    </div>
-                    <a
-                        href="#seeAllPostsModal"
-                        class="underline text-clr-white font-semibold text-center mt-4"
-                        >All Wall Posts</a
-                    >
-                </div>
-            </section>
-            <section class="flex flex-col px-2 w-full py-4 gap-3">
-                <h2 class="text-clr-white font-semibold text-2xl">
-                    Hesham's posts
-                </h2>
-                <div class="flex flex-col">
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            class="w-12 h-12 bg-clr-black rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Hesham El Masry
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                I wonder if my teacher knows that i create
-                                websites using him as an example
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            style="
-                                background: linear-gradient(
-                                    101.31deg,
-                                    #ff00d6 8.33%,
-                                    #b312ff 95%
-                                );
-                            "
-                            class="w-12 h-12 rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Hesham El Masry
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                I actually know nobody that has travelled as
-                                much as me guys! come on, i bet not one of you
-                                have travelled as much as me! Yes i travel a LOT
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex border-t border-primary py-2 w-full">
-                        <div
-                            style="
-                                background: linear-gradient(
-                                    180.31deg,
-                                    #ff006a 8.33%,
-                                    #d4ff12 95%
-                                );
-                            "
-                            class="w-12 h-12 rounded-full border border-clr-white"
-                        ></div>
-                        <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
-                                Hesham El Masry
-                            </p>
-                            <p class="text-clr-white text-sm">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Praesentium, magnam! Eveniet
-                                soluta assumenda error aut, ad perspiciatis
-                                ipsum quasi accusantium blanditiis! Rerum, hic
-                                odit quod necessitatibus voluptatum perspiciatis
-                                expedita eum.
-                            </p>
-                        </div>
-                    </div>
+                <h2
+                    id=""
+                    class="nameOfUser text-clr-white font-semibold text-2xl"
+                ></h2>
+                <div id="postsContainer" class="flex flex-col pb-20">
                     <a
                         href="#seeAllPostsModal"
                         class="underline text-clr-white font-semibold text-center mt-4"

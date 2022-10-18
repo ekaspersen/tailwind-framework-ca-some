@@ -9,79 +9,276 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
             rel="stylesheet"
         />
-        <script src="./js/main.js" type="module" defer></script>
-        <title></title>
+        <script src="./js/index.js" type="module" defer></script>
+        <script src="./js/getPosts.js" type="module" defer></script>
+        <title>SoMe | Feed</title>
     </head>
-    <body class="bg-primary-light min-h-screen">
-        <div class="flex flex-col h-screen bg-primary-light w-full max">
-            <div class="grid place-items-center w-full flex-1">
-                <img src="./img/svg/some-logo.svg" alt="so me logo" />
-            </div>
-            <div class="flex-2 flex justify-center">
-                <form
-                    id="login-form"
-                    class="flex flex-col gap-y-2 p-8 mx-auto w-96 max-w-full text-left bg-gray-300 rounded-md"
-                >
-                    <h2
-                        class="mb-4 text-clr-white p-2 text-2xl border-b-2 border-clr-white w-fit mx-auto text-center"
-                    >
-                        Login
-                    </h2>
+    <body class="bg-primary-dark">
+        <nav
+            class="max-w-md w-full h-20 fixed bottom-0 inset-x-0 mx-auto z-50 flex gap-5 justify-center items-center bg-primary"
+        >
+            <div class="flex w- justify-center gap-40 mx-auto w-full">
+                <a href="."
+                    ><img
+                        class="h-16"
+                        src="./img/svg/home-nav-icon.svg"
+                        alt="feed"
+                /></a>
 
-                    <div class="flex flex-col gap-y-1">
-                        <label for="email"></label><input
-                            id="email"
-                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
-                            name="email"
-                            type="text"
-                            placeholder="Enter email"
-                        />
-                        <span
-                            id="emailErrorNotValid"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Email is not valid must be a valid stud.noroff.no or
-                            noroff.no email address
-                        </span>
-                        <span
-                            id="emailError"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Email is required
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-y-1">
-                        <label for="password"></label><input
-                            id="password"
-                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
-                            name="password"
-                            type="password"
-                            placeholder="Enter password"
-                        />
-                        <span
-                            id="passwordError"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Password is required and must be over 8 chars
-                        </span>
-                    </div>
-                    <div class="flex justify-between">
-                        <a
-                            href="./feed.html"
-                            class="p-2 mt-4 w-[116px] text-center text-[16px] text-clr-white capitalize bg-primary border border-clr-white shadow-lg"
-                            type="submit"
-                        >
-                            Log In
-                        </a>
-                        <a
-                            class="p-2 mt-4 w-[116px] text-center text-[16px] text-clr-white capitalize bg-primary border border-clr-white shadow-lg"
-                            type="submit"
-                        >
-                            Sign Up
-                        </a>
-                    </div>
-                </form>
+                <a href="./pfp.html"
+                    ><img
+                        class="h-16"
+                        src="./img/svg/user-nav-icon.svg"
+                        alt="feed"
+                /></a>
             </div>
-        </div>
+            <div class="fixed w-fit bottom-0 inset-x-0 mx-auto z-50">
+                <img src="./img/svg/new-post-icon.svg" alt="new post button" />
+            </div>
+        </nav>
+        <main class="max-w-md mx-auto px-2">
+            <label for="searchbar"></label
+            ><input
+                class="w-full p-2 placeholder:text-primary text-primary-dark"
+                placeholder="Search for a user"
+                type="text"
+                name="searchbar"
+                id="searchbar"
+            />
+            <form
+                class="flex flex-col px-2 w-full py-4 gap-3 border-b-2 border-clr-white"
+            >
+                <label for=""></label
+                ><textarea
+                    name=""
+                    id=""
+                    placeholder="Write something on Hesham’s wall! ..."
+                    rows="5"
+                    class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
+                ></textarea>
+                <button
+                    name=""
+                    id=""
+                    class="text-base text-clr-white font-semibold bg-primary py-1 px-8 border-2 border-clr-white w-fit"
+                >
+                    Post
+                </button>
+            </form>
+            <section class="flex flex-col px-2 w-full py-4 gap-3">
+                <div id="postsContainer" class="flex flex-col">
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <a href="./pfp.html"
+                            ><div
+                                class="w-12 h-12 bg-clr-black rounded-full border border-clr-white"
+                            ></div
+                        ></a>
+
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Hesham El Masry
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                CLICK MY PROFILE PIC TO VIEW MY PROFILE OVER
+                                HERE HESH LOOK AT ME TO VIEW PFP
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex border-t border-primary py-2 max-w- w-full"
+                    >
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    101.31deg,
+                                    #ff00d6 8.33%,
+                                    #b312ff 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Snorre Kolnes
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Seian Hesh! gratulere med dågen! nej helveta
+                                glemte du snakke engelsk hehe
+                                seiaaaaaaaaaaaaaaaaaaaaan aha haaaaa det va
+                                dumt, jaja. feir med måte!!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            class="w-12 h-12 bg-clr-black rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Eskil Kaspersen
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Happy birthday HESHAMIITOOOO, hope there will be
+                                lots of cake n stuff!!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex border-t border-primary py-2 w-full">
+                        <div
+                            style="
+                                background: linear-gradient(
+                                    180.31deg,
+                                    #ff006a 8.33%,
+                                    #d4ff12 95%
+                                );
+                            "
+                            class="w-12 h-12 rounded-full border border-clr-white"
+                        ></div>
+                        <div class="flex flex-1 flex-col ml-2">
+                            <p class="text-clr-white font-semibold">
+                                Magnam Soluta
+                            </p>
+                            <p class="text-clr-white text-sm">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Praesentium, magnam! Eveniet
+                                soluta assumenda error aut, ad perspiciatis
+                                ipsum quasi accusantium blanditiis! Rerum, hic
+                                odit quod necessitatibus voluptatum perspiciatis
+                                expedita eum.
+                            </p>
+                        </div>
+                    </div>
+                    <a
+                        href="#seeAllPostsModal"
+                        class="underline text-clr-white font-semibold text-center mt-4"
+                        >MORE</a
+                    >
+                </div>
+            </section>
+        </main>
     </body>
 </html>

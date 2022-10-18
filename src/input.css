@@ -6,3 +6,11 @@
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
 }
+.max-w-326px {
+    max-width: 326px;
+}
+input,
+textarea,
+button {
+    color: white;
+}

@@ -7,7 +7,8 @@ export default {
             input: {
                 home: path.resolve(__dirname, "src/index.html"),
                 pfp: path.resolve(__dirname, "src/pfp.html"),
-                feed: path.resolve(__dirname, "src/feed.html"),
+                login: path.resolve(__dirname, "src/login.html"),
+                signup: path.resolve(__dirname, "src/register.html"),
             },
         },
     },

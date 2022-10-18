@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="./js/index.js" type="module" defer></script>
+        <title>Login | SoMe</title>
+    </head>
+    <body class="bg-primary-light min-h-screen">
+        <div class="flex flex-col h-screen bg-primary-light w-full max">
+            <div class="grid place-items-center w-full flex-1">
+                <img src="./img/svg/some-logo.svg" alt="so me logo" />
+            </div>
+            <div class="flex-2 flex justify-center">
+                <form
+                    id="login-form"
+                    class="flex flex-col gap-y-2 p-8 mx-auto w-96 max-w-full text-left bg-gray-300 rounded-md"
+                >
+                    <h2
+                        class="mb-4 text-clr-white p-2 text-2xl border-b-2 border-clr-white w-fit mx-auto text-center"
+                    >
+                        Login
+                    </h2>
+
+                    <div class="flex flex-col gap-y-1">
+                        <label for="email"></label
+                        ><input
+                            id="email"
+                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                            name="email"
+                            type="text"
+                            placeholder="Enter email"
+                        />
+                        <span
+                            id="emailErrorNotValid"
+                            class="hidden text-sm text-red-500"
+                        >
+                            Email is not valid must be a valid stud.noroff.no or
+                            noroff.no email address
+                        </span>
+                        <span
+                            id="emailError"
+                            class="hidden text-sm text-red-500"
+                        >
+                            Email is required
+                        </span>
+                    </div>
+                    <div class="flex flex-col gap-y-1">
+                        <label for="password"></label
+                        ><input
+                            id="password"
+                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                            name="password"
+                            type="password"
+                            placeholder="Enter password"
+                        />
+                        <span
+                            id="passwordError"
+                            class="hidden text-sm text-red-500"
+                        >
+                            Password is required and must be over 8 chars
+                        </span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <a
+                            href="./login.html"
+                            class="p-2 mt-4 w-[116px] text-center text-[16px] text-clr-white capitalize bg-primary border border-clr-white shadow-lg"
+                            type="submit"
+                        >
+                            Sign Up
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
