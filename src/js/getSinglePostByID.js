@@ -3,6 +3,7 @@ import { GET_USER_POSTS_URL } from "./settings/api";
 import { getToken } from "./utils/storage";
 
 const postsContainer = document.querySelector("#postsContainer");
+const postsNotificationMessage = document.querySelector(".posts__notification");
 const accessToken = getToken();
 if (!accessToken) {
     location.href = "/login.html";

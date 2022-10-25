@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,14 +10,13 @@
             rel="stylesheet"
         />
         <script src="./js/index.js" type="module" defer></script>
-        <script src="./js/getPosts.js" type="module" defer></script>
+        <script src="./js/getSinglePostByID.js" type="module" defer></script>
         <script src="./js/createPost.js" type="module" defer></script>
-        
-        <title>SoMe | Feed</title>
+        <title>SoMe | userName</title>
     </head>
-    <body class="bg-primary-dark">
+
+    <body class="bg-primary-dark relative">
         <nav
-            id="navigation"
             class="nav-box-shadow max-w-md w-full h-20 fixed bottom-0 inset-x-0 mx-auto z-50 flex gap-5 justify-center items-center bg-primary"
         >
             <div class="flex justify-center gap-40 mx-auto w-full">
@@ -92,17 +91,65 @@
                 </button>
             </form>
         </div>
+        <header
+            class="flex flex-col items-center p-3 gap-3 text-center border-b-2 border-clr-white relative"
+            style="
+                background: linear-gradient(180deg, #52283a 0%, #98506e 100%);
+            "
+        >
+            <div class="absolute max-w-md w-full flex justify-between">
+                <a href="#contacts" class="ml-3">
+                    <div class="w-16 h-16 bg-primary grid place-items-center">
+                        <img
+                            src="./img/svg/list-hamburger.svg"
+                            alt="list icon"
+                        />
+                    </div>
+                </a>
+                <a href="#addFriend" class="mr-3">
+                    <div class="w-16 h-16 bg-primary grid place-items-center">
+                        <img
+                            class="ml-2"
+                            src="./img/svg/add-user.svg"
+                            alt="add user icon"
+                        />
+                    </div>
+                </a>
+            </div>
+            <div class="h-32 w-32 bg-clr-black rounded-full"></div>
+            <div class="flex flex-col items-center">
+                <h1 class="nameOfUser text-clr-white text-2xl font-semibold">
+                    Hesham El Masry
+                </h1>
+                <p class="text-primary-light text-sm font-semibold">
+                    - - - Title of person - - -
+                </p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <p class="text-base text-clr-white font-semibold">
+                    Description
+                </p>
+                <p class="text-sm text-clr-white max-w-xs">
+                    Sometimes i teach, sometimes i code. <br />
+                    Love Live Laugh and !RECYCLE! <br />
+                    Ready to Mingle and Single!
+                </p>
+            </div>
+        </header>
         <main class="max-w-md mx-auto px-2">
-            <label for="searchbar"></label
-            ><input
-                class="w-full p-2 my- placeholder:text-primary text-primary-dark"
-                placeholder="Search for a user"
-                type="text"
-                name="searchbar"
-                id="searchbar"
-            />
             <section class="flex flex-col px-2 w-full py-4 gap-3">
-                <div id="postsContainer" class="flex flex-col mb-20"></div>
+                <h2
+                    id=""
+                    class="nameOfUser text-clr-white font-semibold text-2xl"
+                ></h2>
+                <div id="postsContainer" class="flex flex-col pb-20">
+                    <a
+                        href="#seeAllPostsModal"
+                        class="underline text-clr-white font-semibold text-center mt-4"
+                        >All of Hesham’s Posts</a
+                    >
+                </div>
             </section>
         </main>
     </body>

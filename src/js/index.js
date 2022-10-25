@@ -1,6 +1,6 @@
 import "../input.css";
 import { clearStorage } from "./utils/storage";
-import createHeaderBar from "./components/createHeaderBar";
+import createHeaderBar from "./components/navbar";
 
 createHeaderBar();
 const logOutBtn = document.querySelector("#logout-btn");
@@ -18,6 +18,6 @@ document.getElementById("createPostBtn").onclick = function () {
 };
 
 function createPostForm() {
-    document.getElementById("newPostForm").classList.toggle("hidden");
-    document.getElementById("newPostForm").classList.toggle("grid");
+    document.getElementById("newPostForm").classList.toggle("bottom-below");
+    document.getElementById("newPostForm").classList.toggle("bottom-0");
 }

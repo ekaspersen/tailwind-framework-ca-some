@@ -10,7 +10,8 @@
             rel="stylesheet"
         />
         <script src="./js/index.js" type="module" defer></script>
-        <title>Login | SoMe</title>
+        <script src="./js/register.js" type="module" defer></script>
+        <title>Sign Up | SoMe</title>
     </head>
     <body class="bg-primary-light min-h-screen">
         <div class="flex flex-col h-screen bg-primary-light w-full max">
@@ -19,61 +20,120 @@
             </div>
             <div class="flex-2 flex justify-center">
                 <form
-                    id="login-form"
+                    id="signup-form"
                     class="flex flex-col gap-y-2 p-8 mx-auto w-96 max-w-full text-left bg-gray-300 rounded-md"
                 >
                     <h2
                         class="mb-4 text-clr-white p-2 text-2xl border-b-2 border-clr-white w-fit mx-auto text-center"
                     >
-                        Login
+                        Sign Up
                     </h2>
 
                     <div class="flex flex-col gap-y-1">
-                        <label for="email"></label
-                        ><input
-                            id="email"
-                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
-                            name="email"
-                            type="text"
-                            placeholder="Enter email"
-                        />
-                        <span
-                            id="emailErrorNotValid"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Email is not valid must be a valid stud.noroff.no or
-                            noroff.no email address
-                        </span>
-                        <span
-                            id="emailError"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Email is required
-                        </span>
-                    </div>
-                    <div class="flex flex-col gap-y-1">
-                        <label for="password"></label
-                        ><input
-                            id="password"
-                            class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
-                            name="password"
-                            type="password"
-                            placeholder="Enter password"
-                        />
-                        <span
-                            id="passwordError"
-                            class="hidden text-sm text-red-500"
-                        >
-                            Password is required and must be over 8 chars
-                        </span>
+                        <div class="flex flex-col gap-y-1">
+                            <label for="firstName" class="text-gray-600">
+                            </label>
+                            <input
+                                id="userName"
+                                class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                                name="firstName"
+                                type="text"
+                                placeholder="Enter First Name"
+                            />
+                            <span
+                                id="userNameError"
+                                class="hidden text-sm text-red-500"
+                            >
+                                Please enter your first name</span
+                            >
+                        </div>
+
+                        <div class="flex flex-col gap-y-1">
+                            <label for="email" class="text-gray-600"> </label>
+                            <input
+                                id="email"
+                                class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                                name="email"
+                                type="text"
+                                placeholder="Enter email"
+                            />
+                            <span
+                                id="emailErrorNotValid"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Email is not valid must be a valid
+                                stud.noroff.no or noroff.no email address
+                            </span>
+                            <span
+                                id="emailError"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Email is required
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-y-1">
+                            <label for="password" class="text-gray-600">
+                            </label>
+                            <input
+                                id="password"
+                                class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                                name="password"
+                                type="password"
+                                placeholder="Enter password"
+                            />
+                            <span
+                                id="passwordError"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Password is required and must be over 8 chars
+                            </span>
+                            <span
+                                id="passwordErrorNotValid"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Password is not valid
+                            </span>
+                        </div>
+                        <div class="flex flex-col gap-y-1">
+                            <label for="confirm_password" class="text-gray-600">
+                            </label>
+                            <input
+                                id="confirm_password"
+                                class="p-2 bg-clr-transparent border-b-2 border-clr-white placeholder:text-clr-white"
+                                name="password"
+                                type="password"
+                                placeholder="Confirm Password"
+                            />
+                            <span
+                                id="confirmPasswordErrorNotMatching"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Passwords doesn't match
+                            </span>
+                            <span
+                                id="confirmPasswordError"
+                                class="hidden text-primary-danger font-semibold"
+                            >
+                                Confirm Password is required and must be over 8
+                                chars
+                            </span>
+                        </div>
                     </div>
                     <div class="flex justify-between items-center">
-                        <a
-                            href="./login.html"
+                        <button
                             class="p-2 mt-4 w-[116px] text-center text-[16px] text-clr-white capitalize bg-primary border border-clr-white shadow-lg"
                             type="submit"
                         >
                             Sign Up
+                        </button>
+                        <p class="mt-4 text-clr-white">
+                            -- <span class="text-xs uppercase">or</span> --
+                        </p>
+                        <a
+                            class="p-2 mt-4 w-[116px] text-center text-[16px] text-clr-white capitalize bg-primary border border-clr-white shadow-lg"
+                            href="./login.html"
+                        >
+                            Log in
                         </a>
                     </div>
                 </form>

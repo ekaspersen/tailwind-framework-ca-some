@@ -11,13 +11,15 @@
         />
         <script src="./js/index.js" type="module" defer></script>
         <script src="./js/getPostsByUserID.js" type="module" defer></script>
+        <script src="./js/createPost.js" type="module" defer></script>
+        <script src="./js/logOut.js" type="module" defer></script>
         <title>SoMe | userName</title>
     </head>
     <body class="bg-primary-dark relative">
         <nav
-            class="max-w-md w-full h-20 fixed bottom-0 inset-x-0 mx-auto z-50 flex gap-5 justify-center items-center bg-primary"
+            class="nav-box-shadow max-w-md w-full h-20 fixed bottom-0 inset-x-0 mx-auto z-50 flex gap-5 justify-center items-center bg-primary"
         >
-            <div class="flex w- justify-center gap-40 mx-auto w-full">
+            <div class="flex justify-center gap-40 mx-auto w-full">
                 <a href="."
                     ><img
                         class="h-16"
@@ -43,29 +45,46 @@
         </nav>
         <div
             id="newPostForm"
-            class="hidden fixed bottom-20 max-w-md mx-auto inset-x-0 w-full place-items-center z-40 bg-primary-dark"
+            class="bottom-below nav-box-shadow fixed bottom-20 max-w-md mx-auto inset-x-0 w-full place-items-center z-40 bg-primary-dark"
         >
             <form
+                id="createPostForm"
                 class="flex flex-col px-2 w-full py-4 gap-3 border-2 border-b-0 border-primary"
             >
-                <label for="Subject"></label>
+                <h2 class="text-clr-white font-semibold text-3xl">New post</h2>
+                <label class="text-clr-white" for="postSubject"
+                    >Subject of post</label
+                >
                 <input
                     type="text"
-                    name=""
-                    id=""
+                    name="postSubject"
+                    id="postSubject"
+                    placeholder="Subject"
                     class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
                 />
-                <label for=""></label
+                <span
+                    class="hidden text-primary-danger font-semibold"
+                    id="postSubjectError"
+                    >Field may not be empty</span
+                >
+                <label class="text-clr-white" for="postContent"
+                    >Whats on your mind?</label
                 ><textarea
-                    name=""
-                    id=""
-                    placeholder="Tell the world something ..."
+                    name="postContent"
+                    id="postContent"
+                    placeholder="Today i ..."
                     rows="5"
                     class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
                 ></textarea>
+                <span
+                    class="hidden text-primary-danger font-semibold"
+                    id="postContentError"
+                    >Field may not be empty</span
+                >
                 <button
-                    name=""
-                    id=""
+                    name="submitPost"
+                    id="submitPost"
+                    type="submit"
                     class="text-base text-clr-white font-semibold bg-primary py-1 px-8 border-2 border-clr-white w-fit"
                 >
                     Post
@@ -79,19 +98,30 @@
             "
         >
             <div class="absolute max-w-md w-full flex justify-between">
-                <a href="#contacts" class="ml-3">
-                    <div class="w-16 h-16 bg-primary grid place-items-center">
-                        <img
-                            src="./img/svg/list-hamburger.svg"
-                            alt="list icon"
-                        />
+                <div class="ml-3 flex flex-col">
+                    <button id="pfpSettings">
+                        <div
+                            class="w-16 h-16 bg-primary grid place-items-center"
+                        >
+                            <img
+                                src="./img/svg/list-hamburger.svg"
+                                alt="list icon"
+                            />
+                        </div>
+                    </button>
+                    <div
+                        id="pfpSettingsDropdown"
+                        class="hidden pfp-settings-dropdown-style"
+                    >
+                        <button id="logOutBTN">Log Out</button>
                     </div>
-                </a>
-                <a href="#addFriend" class="mr-3"
+                </div>
+
+                <a href="#friendList" class="mr-3"
                     ><div class="w-16 h-16 bg-primary grid place-items-center">
                         <img
-                            class="ml-2"
-                            src="./img/svg/add-user.svg"
+                            src="./img/svg/user-icon.svg"
+                            fill="#fff"
                             alt="add user icon"
                         /></div
                 ></a>
@@ -118,24 +148,6 @@
             </div>
         </header>
         <main class="max-w-md mx-auto px-2">
-            <section
-                class="flex flex-col px-2 w-full py-4 gap-3 border-b-2 border-clr-white"
-            >
-                <label for=""></label
-                ><textarea
-                    name=""
-                    id=""
-                    placeholder="Write something on Hesham’s wall! ..."
-                    rows="5"
-                    class="bg-primary p-2 border-2 border-clr-white placeholder:text-clr-white"
-                ></textarea>
-                <a
-                    href=""
-                    class="text-base text-clr-white font-semibold bg-primary py-1 px-8 border-2 border-clr-white w-fit"
-                    >Post</a
-                >
-            </section>
-
             <section class="flex flex-col px-2 w-full py-4 gap-3">
                 <h2
                     id=""

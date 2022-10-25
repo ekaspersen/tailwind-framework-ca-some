@@ -29,26 +29,23 @@ async function getAllPosts() {
         console.log(posts);
         postsContainer.innerHTML = "";
         for (let i = 0; i < numberOfPosts; i++) {
-            console.log("___________");
-            console.log(posts[i].id);
-            console.log(posts[i].author.name);
-            console.log(posts[i].title);
-            console.log(posts[i].body);
-            console.log("___________");
-
             postsContainer.innerHTML += `
-                    <div class="flex border-t border-primary py-2 w-full">
+                    <div class="post-style">
                         <a href="single-post.html?post_id=${posts[i].id}"
                             >
 
                             <div
-                                class="w-12 h-12 bg-clr-black rounded-full border border-clr-white"
+                                class="bg-clr-black rounded-full border border-clr-white"
+                                style="width: 48px; height: 48px;"
                             ></div
                         ></a>
 
                         <div class="flex flex-1 flex-col ml-2">
-                            <p class="text-clr-white font-semibold">
+                            <p class="text-primary-light ">
                                 ${posts[i].author.name}
+                            </p>
+                            <p class="text-clr-white font-semibold">
+                                ${posts[i].title}
                             </p>
                             <p class="text-clr-white text-sm max-w-326px ">
                                 ${posts[i].body}

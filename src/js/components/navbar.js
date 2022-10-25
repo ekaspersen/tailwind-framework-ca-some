@@ -2,7 +2,7 @@ import { getUserName } from "../utils/storage";
 
 function createHeaderBar() {
     const { pathname } = document.location;
-    const navBar = document.querySelector("#nav-bar");
+    const navBar = document.querySelector("#navigationLOLOLOL");
     if (navBar) {
         const userName = getUserName();
         let navLinks;

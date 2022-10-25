@@ -6,6 +6,7 @@ module.exports = {
                 light: "#D16A95",
                 DEFAULT: "#98506E",
                 dark: "#5F3547",
+                danger: "#EF0056",
             },
             clr: {
                 white: "#FFF",
